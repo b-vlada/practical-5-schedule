@@ -1,0 +1,28 @@
+.dayColumn {
+  min-height: 400px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 2px dashed #ddd;
+  transition: border-color 0.2s;
+}
+
+.dayColumn.dragOver {
+  border-color: #4a90d9;
+  background: #e8f4fd;
+}
+
+.dayHeader {
+  font-weight: 600;
+  text-align: center;
+  padding: 8px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.lessonsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 300px;
+}

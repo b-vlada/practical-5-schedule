@@ -1,0 +1,101 @@
+.lessonCard {
+  padding: 12px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-left: 4px solid var(--lesson-color, #4a90d9);
+  position: relative;
+  min-height: 100px;
+}
+
+.lessonCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.deleteButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: #ff4444;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  padding: 0;
+  line-height: 1;
+  z-index: 10;
+}
+
+.lessonCard:hover .deleteButton {
+  opacity: 1;
+}
+
+.deleteButton:hover {
+  background: #cc0000;
+  transform: scale(1.1);
+}
+
+.dragHandle {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+  z-index: 10;
+}
+
+.lessonCard:hover .dragHandle {
+  opacity: 1;
+}
+
+.dragIcon {
+  font-size: 16px;
+  color: #666;
+  user-select: none;
+}
+
+.dragHandle:active {
+  cursor: grabbing;
+}
+
+.lessonContent {
+  padding-top: 25px;
+}
+
+.lessonTitle {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.lessonTime {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.lessonDetails {
+  font-size: 11px;
+  color: #888;
+}
+
+.lessonDetails span {
+  display: block;
+}
